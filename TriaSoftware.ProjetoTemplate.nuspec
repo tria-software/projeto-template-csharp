@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>TriaSoftware.ProjetoTemplate</id>
+    <version>1.0.0</version>
+    <authors>Guilherme Camargo</authors>
+    <owners>Guilherme Camargo</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/tria-software/projeto-template-csharp</projectUrl>
+    <iconUrl>https://example.com/icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Template de projeto .NET</description>
+    <releaseNotes>Primeira versão do template.</releaseNotes>
+    <tags>template dotnet</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="**\*" target="content" />
+  </files>
+</package>

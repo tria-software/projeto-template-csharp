@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Guilherme Camargo",
+  "classifications": [
+    "WebAPI",
+    "MVC"
+  ],
+  "identity": "TriaSoftware.ProjetoTemplate",
+  "name": "Tria Software Projeto Template",
+  "shortName": "projetotemplate",
+  "sourceName": "ProjetoTemplate",
+  "preferNameDirectory": true,
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "symbols": {
+    "ProjectName": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "ProjetoTemplate",
+      "fileRename": "ProjetoTemplate",
+      "replaces": "ProjetoTemplate"
+    }
+  }
+}

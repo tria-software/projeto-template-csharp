@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.21.2" />
+	<PackageReference Include="Microsoft.AspNetCore.App" />
+	<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.8" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+		<PrivateAssets>all</PrivateAssets>
+		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
+	<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.4" />
+	<PackageReference Include="Nancy" Version="2.0.0" />
+	<PackageReference Include="Quartz.AspNetCore" Version="3.13.0" />
+	<PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.3" />
+	<PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.7.3" />
+	<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.7.3" />
+  </ItemGroup>
+	
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjetoTemplate.BL\ProjetoTemplate.BL.csproj" />
+    <ProjectReference Include="..\ProjetoTemplate.Repository\ProjetoTemplate.Repository.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Content Update="wwwroot\Storage\Storage.txt">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Update="wwwroot\TemplateEmail\bacesso_sistema.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Update="wwwroot\TemplateEmail\recuperacao_senha.html">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Update="web.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+</Project>
