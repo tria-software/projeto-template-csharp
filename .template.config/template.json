@@ -22,5 +22,17 @@
       "fileRename": "ProjetoTemplate",
       "replaces": "ProjetoTemplate"
     }
-  }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            ".git/**",
+            ".github/**"
+          ]
+        }
+      ]
+    }
+  ]
 }
