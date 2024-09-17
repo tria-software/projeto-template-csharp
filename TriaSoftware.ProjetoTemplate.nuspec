@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>TriaSoftware.ProjetoTemplate.Teste</id>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <authors>Guilherme Camargo</authors>
     <owners>Guilherme Camargo</owners>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
@@ -10,7 +10,7 @@
     <iconUrl>https://example.com/icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Template de projeto .NET</description>
-    <releaseNotes>Terceira versão do template.</releaseNotes>
+    <releaseNotes>Adicionado alias na criação de entidades</releaseNotes>
     <tags>template dotnet</tags>
     <dependencies>
     </dependencies>

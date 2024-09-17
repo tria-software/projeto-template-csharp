@@ -18,16 +18,18 @@
     "ProjectName": {
       "type": "parameter",
       "datatype": "string",
-      "defaultValue": "ProjetoTemplate",
-      "fileRename": "ProjetoTemplate",
-      "replaces": "ProjetoTemplate"
+      "defaultValue": "ProjectTemplate",
+      "fileRename": "ProjectTemplate",
+      "replaces": "ProjectTemplate",
+      "shortName": "p"
     },
     "EntityName": {
       "type": "parameter",
       "datatype": "string",
       "defaultValue": "",
       "fileRename": "EntityName",
-      "replaces": "EntityName"
+      "replaces": "EntityName",
+      "shortName": "e"
     },
     "entityName": {
       "type": "generated",
@@ -43,31 +45,36 @@
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "true",
-      "description": "Include the Controller"
+      "description": "Include the Controller",
+      "shortName": "c"
     },
     "IncludeService": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "true",
-      "description": "Include the Service"
+      "description": "Include the Service",
+      "shortName": "s"
     },
     "IncludeModel": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "true",
-      "description": "Include the Model"
+      "description": "Include the Model",
+      "shortName": "m"
     },
     "IncludeDTO": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "true",
-      "description": "Include the DTO"
+      "description": "Include the DTO",
+      "shortName": "d"
     },
     "IncludeModelsConfig": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "true",
-      "description": "Include the Models Configuration"
+      "description": "Include the Models Configuration",
+      "shortName": "mc"
     }
   },
   "sources": [
