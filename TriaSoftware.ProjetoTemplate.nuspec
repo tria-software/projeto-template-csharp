@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>TriaSoftware.ProjetoTemplate</id>
-    <version>1.0.0</version>
+    <id>TriaSoftware.ProjetoTemplate.Teste</id>
+    <version>1.0.3</version>
     <authors>Guilherme Camargo</authors>
     <owners>Guilherme Camargo</owners>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
@@ -10,7 +10,7 @@
     <iconUrl>https://example.com/icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Template de projeto .NET</description>
-    <releaseNotes>Primeira versão do template.</releaseNotes>
+    <releaseNotes>Terceira versão do template.</releaseNotes>
     <tags>template dotnet</tags>
     <dependencies>
     </dependencies>

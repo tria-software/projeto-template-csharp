@@ -21,18 +21,148 @@
       "defaultValue": "ProjetoTemplate",
       "fileRename": "ProjetoTemplate",
       "replaces": "ProjetoTemplate"
+    },
+    "EntityName": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "",
+      "fileRename": "EntityName",
+      "replaces": "EntityName"
+    },
+    "entityName": {
+      "type": "generated",
+      "generator": "casing",
+      "parameters": {
+        "source": "EntityName",
+        "toLower": true,
+        "toCamelCase": true
+      },
+      "replaces": "entityName"
+    },
+    "IncludeController": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Include the Controller"
+    },
+    "IncludeService": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Include the Service"
+    },
+    "IncludeModel": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Include the Model"
+    },
+    "IncludeDTO": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Include the DTO"
+    },
+    "IncludeModelsConfig": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Include the Models Configuration"
     }
   },
   "sources": [
     {
       "modifiers": [
         {
+          "condition": "EntityName == ''",
+          "include": [
+            "ProjetoTemplate.*/*"
+          ],
+          "exclude": [
+            "ProjetoTemplate.API/Controllers/EntityNameController.cs",
+            "ProjetoTemplate.BL/EntityName/*EntityName*.cs",
+            "ProjetoTemplate.Domain/DTO/EntityName/EntityName*.cs",
+            "ProjetoTemplate.Domain/Models/EntityName.cs",
+            "ProjetoTemplate.Repository/ModelsConfiguration/EntityNameConfig.cs"
+          ]
+        },
+        {
+          "condition": "EntityName != ''",
+          "exclude": [
+            "**/*"
+          ]
+        },
+        {
+          "condition": "EntityName != '' && IncludeController",
+          "include": [
+            "ProjetoTemplate.API/Controllers/EntityNameController.cs"
+          ]
+        },
+        {
+          "condition": "EntityName != '' && IncludeService",
+          "include": [
+            "ProjetoTemplate.BL/EntityName/*EntityName*.cs"
+          ]
+        },
+        {
+          "condition": "EntityName != '' && IncludeModel",
+          "include": [
+            "ProjetoTemplate.Domain/Models/EntityName.cs"
+          ]
+        },
+        {
+          "condition": "EntityName != '' && IncludeDTO",
+          "include": [
+            "ProjetoTemplate.Domain/DTO/EntityName/EntityName*.cs"
+          ]
+        },
+        {
+          "condition": "EntityName != '' && IncludeModelsConfig",
+          "include": [
+            "ProjetoTemplate.Repository/ModelsConfiguration/EntityNameConfig.cs"
+          ]
+        },
+        {
           "exclude": [
             ".git/**",
-            ".github/**"
+            ".github/**",
+            ".template.config/**",
+            "*.nuspec"
           ]
         }
       ]
+    }
+  ],
+  "postActions": [
+    {
+      "condition": "EntityName != '' && IncludeService",
+      "description": "Register the new service in IocConfig.cs",
+      "manualInstructions": [
+        {
+          "text": "Add the service registration in IocConfig.cs"
+        }
+      ],
+      "actionId": "48d95235-fbb4-4c7a-9b55-98d3409b38b7",
+      "args": {
+        "fileRelativePath": "{{ProjectName}}.API/Configuration/IocConfig.cs",
+        "searchText": "// Registro de BOs (Business Objects)",
+        "newText": "services.AddTransient<IEntityNameBO, EntityNameBO>();"
+      }
+    },
+    {
+      "condition": "EntityName != '' && IncludeModel",
+      "description": "Register the new model in ProjetoTemplateDbContext.cs",
+      "manualInstructions": [
+        {
+          "text": "Add the new model registration in ProjetoTemplateDbContext.cs"
+        }
+      ],
+      "actionId": "895c335b-48d6-4014-b708-c5e89f1483da",
+      "args": {
+        "fileRelativePath": "{{ProjectName}}.Repository/Configuration/ProjetoTemplateDbContext.cs",
+        "searchText": "// Add DbSet for each entity",
+        "newText": "public virtual DbSet<EntityName> EntityName { get; set; }"
+      }
     }
   ]
 }
